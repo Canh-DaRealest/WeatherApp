@@ -3,6 +3,4 @@ Weather android app use OpenWeatherMap api
 
 
 
-
-https://user-images.githubusercontent.com/101713219/210545938-50a67c5d-bfd6-4f3b-9dd4-463b8f2aceda.mp4
-
+![Screenshot 2023-02-02 211448](https://user-images.githubusercontent.com/101713219/216348487-be0ea55b-f170-4391-8494-5a8b927eff71.png)
