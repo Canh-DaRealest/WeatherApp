@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_bg2">
+    android:background="@drawable/bg_wallpaper3">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -13,414 +13,388 @@
         android:paddingVertical="15dp">
 
 
-        <com.google.android.material.card.MaterialCardView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="10dp"
-            android:background="@drawable/bg_day"
-            app:cardCornerRadius="16dp"
-            app:cardElevation="11dp">
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="20dp">
 
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:padding="20dp">
+            <TableRow
+                android:id="@+id/tr_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
-
-                <TableRow
-                    android:id="@+id/tr_location"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:gravity="center"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
-
-                    <ImageView
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:layout_gravity="center"
-                        android:src="@drawable/ic_location" />
-
-                    <TextView
-                        android:id="@+id/tv_location"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginHorizontal="15dp"
-                        android:fontFamily="sans-serif-light"
-                        android:gravity="center"
-                        android:text=""
-                        android:textColor="@color/weather_item_color"
-                        android:textSize="15sp"
-                        android:textStyle="bold" />
-
-                    <ImageView
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:layout_gravity="center"
-                        android:src="@drawable/ic_arrow_down" />
-
-
-                </TableRow>
-
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_location" />
 
                 <TextView
-                    android:id="@+id/tv_curent_time"
+                    android:id="@+id/tv_location"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginHorizontal="10dp"
-                    android:layout_marginVertical="10dp"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="15dp"
                     android:fontFamily="sans-serif-light"
                     android:gravity="center"
                     android:text=""
                     android:textColor="@color/weather_item_color"
                     android:textSize="15sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/tr_location" />
+                    android:textStyle="bold" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_arrow_down" />
+
+
+            </TableRow>
+
+
+            <TextView
+                android:id="@+id/tv_curent_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="10dp"
+                android:fontFamily="sans-serif-light"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/clor_nomal"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tr_location" />
+
+
+            <ImageView
+                android:id="@+id/iv_weather_image"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_broken_clouds"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+            <TextView
+                android:id="@+id/tv_degree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="sans-serif-light"
+                android:gravity="center_horizontal|bottom"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/weather_item_color"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_max_min_temp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="sans-serif-light"
+                android:gravity="center_horizontal"
+                android:text=""
+                android:textColor="#9E9B9B"
+                android:textSize="17sp" />
+
+
+            <TextView
+                android:id="@+id/tv_condition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="sans-serif-light"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/weather_item_color"
+                android:textSize="17sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/tv_feellike"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center_vertical"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:orientation="vertical">
+                    android:layout_gravity="center"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/weather_item_color"
+                    android:textSize="11sp" />
 
 
-                        <ImageView
-                            android:id="@+id/iv_weather_image"
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            android:adjustViewBounds="true"
-                            android:scaleType="fitCenter"
+                <TextView
+                    android:id="@+id/tv_wind"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="center"
+                    android:text=" "
+                    android:textColor="@color/weather_item_color"
+                    android:textSize="11sp" />
 
-                            app:layout_constraintStart_toStartOf="parent" />
+                <TextView
+                    android:id="@+id/tv_cloud"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/weather_item_color"
+                    android:textSize="11sp" />
 
-                        <TextView
-                            android:id="@+id/tv_degree"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:fontFamily="sans-serif-light"
-                            android:gravity="center"
-                            android:singleLine="true"
-                            android:text=""
-                            android:textColor="@color/weather_item_color"
-                            android:textSize="30sp"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHorizontal_bias="0.55"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@id/iv_weather_image" />
+                <TextView
+                    android:id="@+id/tv_pressure"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/weather_item_color"
+                    android:textSize="11sp" />
 
+                <TextView
+                    android:id="@+id/tv_sunrise"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/weather_item_color"
+                    android:textSize="11sp" />
 
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_weight="1"
-                        android:gravity="center_vertical|end|bottom"
-                        android:orientation="vertical">
-
-
-                        <TextView
-                            android:id="@+id/tv_condition"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical|end"
-                            android:fontFamily="sans-serif-light"
-                            android:gravity="center"
-                            android:text=""
-                            android:textColor="@color/weather_item_color"
-                            android:textSize="11sp" />
-
-
-                        <TextView
-                            android:id="@+id/tv_max_min_temp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center|end"
-                            android:fontFamily="sans-serif-light"
-                            android:gravity="center"
-                            android:text=""
-                            android:textColor="@color/weather_item_color"
-                            android:textSize="11sp" />
-
-
-                        <TextView
-                            android:id="@+id/tv_feellike"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center|end"
-                            android:fontFamily="sans-serif-light"
-                            android:gravity="center"
-                            android:text=""
-                            android:textColor="@color/weather_item_color"
-                            android:textSize="11sp" />
-
-
-                        <TextView
-                            android:id="@+id/tv_wind"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center|end"
-                            android:fontFamily="sans-serif-light"
-                            android:gravity="center"
-                            android:text=" "
-                            android:textColor="@color/weather_item_color"
-                            android:textSize="11sp" />
-
-                        <TextView
-                            android:id="@+id/tv_cloud"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center|end"
-                            android:fontFamily="sans-serif-light"
-                            android:gravity="center"
-                            android:text=""
-                            android:textColor="@color/weather_item_color"
-                            android:textSize="11sp" />
-
-                        <TextView
-                            android:id="@+id/tv_pressure"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center|end"
-                            android:fontFamily="sans-serif-light"
-                            android:gravity="center"
-                            android:text=""
-                            android:textColor="@color/weather_item_color"
-                            android:textSize="11sp" />
-
-                        <TextView
-                            android:id="@+id/tv_sunrise"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center|end"
-                            android:fontFamily="sans-serif-light"
-                            android:gravity="center"
-                            android:text=""
-                            android:textColor="@color/weather_item_color"
-                            android:textSize="11sp" />
-
-                        <TextView
-                            android:id="@+id/tv_sunset"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center|end"
-                            android:fontFamily="sans-serif-light"
-                            android:gravity="center"
-                            android:text=""
-                            android:textColor="@color/weather_item_color"
-                            android:textSize="11sp" />
-
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/rv_today_weather"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/tv_sunset"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/weather_item_color"
+                    android:textSize="11sp" />
 
 
             </LinearLayout>
-        </com.google.android.material.card.MaterialCardView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/weather_item_color" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_today_weather"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp" />
 
 
-        <com.google.android.material.card.MaterialCardView
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginHorizontal="20dp"
+            android:background="@color/weather_item_color" />
+
+        <LinearLayout
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
-            android:background="@drawable/bg_day"
-            app:cardCornerRadius="15dp"
-            app:cardElevation="11dp">
+            android:orientation="vertical"
+            android:padding="10dp">
 
 
-            <LinearLayout
-
+            <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="15dp"
-                android:orientation="vertical"
-                android:padding="10dp">
+
+                android:paddingVertical="5dp">
 
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-
-                    android:paddingVertical="5dp">
+                <TextView
+                    style="@style/textAirCondition"
+                    android:text="Chất lượng không khí:" />
 
 
-                    <TextView
-                        style="@style/textAirCondition"
-                        android:text="Chất lượng không khí:" />
+                <TextView
+                    android:id="@+id/tv_aircondition"
+                    style="@style/textAirCondition"
+                    android:text="1068.12μg/m3" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:paddingVertical="5dp">
 
 
-                    <TextView
-                        android:id="@+id/tv_aircondition"
-                        style="@style/textAirCondition"
-                        android:text="1068.12μg/m3" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-
-                    android:paddingVertical="5dp">
+                <TextView
+                    style="@style/textAirCondition"
+                    android:text="co:" />
 
 
-                    <TextView
-                        style="@style/textAirCondition"
-                        android:text="co:" />
+                <TextView
+                    android:id="@+id/tv_co"
+                    style="@style/textAirCondition"
+                    android:text="1068.12μg/m3" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="5dp">
 
 
-                    <TextView
-                        android:id="@+id/tv_co"
-                        style="@style/textAirCondition"
-                        android:text="1068.12μg/m3" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingVertical="5dp">
+                <TextView
+                    style="@style/textAirCondition"
+                    android:text="no" />
 
 
-                    <TextView
-                        style="@style/textAirCondition"
-                        android:text="no" />
+                <TextView
+                    android:id="@+id/tv_no"
+                    style="@style/textAirCondition"
+                    android:text="1068.12μg/m3" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="5dp">
 
 
-                    <TextView
-                        android:id="@+id/tv_no"
-                        style="@style/textAirCondition"
-                        android:text="1068.12μg/m3" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingVertical="5dp">
+                <TextView
+                    style="@style/textAirCondition"
+                    android:text="no2:" />
 
 
-                    <TextView
-                        style="@style/textAirCondition"
-                        android:text="no2:" />
+                <TextView
+                    android:id="@+id/tv_no2"
+                    style="@style/textAirCondition"
+                    android:text="1068.12μg/m3" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="5dp">
 
 
-                    <TextView
-                        android:id="@+id/tv_no2"
-                        style="@style/textAirCondition"
-                        android:text="1068.12μg/m3" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingVertical="5dp">
+                <TextView
+                    style="@style/textAirCondition"
+                    android:text="o3:" />
 
 
-                    <TextView
-                        style="@style/textAirCondition"
-                        android:text="o3:" />
+                <TextView
+                    android:id="@+id/tv_o3"
+                    style="@style/textAirCondition"
+                    android:text="1068.12μg/m3" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="5dp">
 
 
-                    <TextView
-                        android:id="@+id/tv_o3"
-                        style="@style/textAirCondition"
-                        android:text="1068.12μg/m3" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingVertical="5dp">
+                <TextView
+                    style="@style/textAirCondition"
+                    android:text="so2:" />
 
 
-                    <TextView
-                        style="@style/textAirCondition"
-                        android:text="so2:" />
+                <TextView
+                    android:id="@+id/tv_so2"
+                    style="@style/textAirCondition"
+                    android:text="1068.12μg/m3" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="5dp">
 
 
-                    <TextView
-                        android:id="@+id/tv_so2"
-                        style="@style/textAirCondition"
-                        android:text="1068.12μg/m3" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingVertical="5dp">
+                <TextView
+                    style="@style/textAirCondition"
+                    android:text="pm2_5:" />
 
 
-                    <TextView
-                        style="@style/textAirCondition"
-                        android:text="pm2_5:" />
+                <TextView
+                    android:id="@+id/tv_pm2_5"
+                    style="@style/textAirCondition"
+                    android:text="1068.12μg/m3" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="5dp">
 
 
-                    <TextView
-                        android:id="@+id/tv_pm2_5"
-                        style="@style/textAirCondition"
-                        android:text="1068.12μg/m3" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingVertical="5dp">
+                <TextView
+                    style="@style/textAirCondition"
+                    android:text="pm10" />
 
 
-                    <TextView
-                        style="@style/textAirCondition"
-                        android:text="pm10" />
+                <TextView
+                    android:id="@+id/tv_pm10"
+                    style="@style/textAirCondition"
+                    android:text="1068.12μg/m3" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:paddingVertical="5dp">
 
 
-                    <TextView
-                        android:id="@+id/tv_pm10"
-                        style="@style/textAirCondition"
-                        android:text="1068.12μg/m3" />
-                </TableRow>
+                <TextView
+                    style="@style/textAirCondition"
+                    android:text="nh3:"
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-
-                    android:paddingVertical="5dp">
+                    />
 
 
-                    <TextView
-                        style="@style/textAirCondition"
-                        android:text="nh3:"
+                <TextView
+                    android:id="@+id/tv_nh3"
+                    style="@style/textAirCondition"
+                    android:text="1068.12μg/m3" />
+            </TableRow>
 
-                        />
+        </LinearLayout>
 
-
-                    <TextView
-                        android:id="@+id/tv_nh3"
-                        style="@style/textAirCondition"
-                        android:text="1068.12μg/m3" />
-                </TableRow>
-
-            </LinearLayout>
-
-        </com.google.android.material.card.MaterialCardView>
-
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginHorizontal="20dp"
+            android:background="@color/weather_item_color" />
 
         <androidx.recyclerview.widget.RecyclerView
 

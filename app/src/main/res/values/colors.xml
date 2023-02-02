@@ -7,7 +7,7 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="weather_bg_color">#FFFFFF</color>
-    <color name="weather_item_color">#FFFFFF</color>
+    <color name="weather_item_color">@color/clor_nomal</color>
     <color name="white">#FFFFFFFF</color>
     <color name="cardview_item_color">#161616</color>
     <color name="gray">#7C7979</color>

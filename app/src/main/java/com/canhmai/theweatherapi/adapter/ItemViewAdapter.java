@@ -146,7 +146,7 @@ public class ItemViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
 
 
     public class ForecastViewHolder extends RecyclerView.ViewHolder {
-        MaterialCardView cardView;
+        LinearLayout cardView;
         TextView tvTime;
         ImageView ivWeatherImage;
 

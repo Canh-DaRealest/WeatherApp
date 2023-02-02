@@ -4,7 +4,7 @@
     android:id="@+id/fl_search_layout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/bg_nigh"
+    android:background="@drawable/bg_wallpaper3"
     android:orientation="vertical"
     android:padding="20dp">
 
@@ -25,8 +25,6 @@
         android:layout_height="50dp"
         android:layout_marginTop="20dp"
         android:autofillHints="name"
-        android:backgroundTint="@color/white"
-        android:background="@drawable/bg_day"
         android:fontFamily="sans-serif-light"
         android:hint="Nhập tên thành phố"
         android:imeOptions="actionSearch"

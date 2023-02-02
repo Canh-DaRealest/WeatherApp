@@ -4,6 +4,7 @@ import static androidx.constraintlayout.helper.widget.MotionEffect.TAG;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatImageView;
 import androidx.core.app.ActivityCompat;
 
 import androidx.lifecycle.Observer;
@@ -178,14 +179,13 @@ public class MainActivity extends AppCompatActivity implements OnResponseCallbac
             binding.includeFragment.tvDegree.setText(String.format("%s°C", currenWeatherResponse.getMain().getTemp()));
 
 
-            Glide.with(MainActivity.this).load("https://openweathermap.org/img/wn/" + currenWeatherResponse.getWeather().get(0).getIcon() + "@2x.png").into(binding.includeFragment.ivWeatherImage);
-
-
-            binding.includeFragment.tvCondition.setText(String.format("Trạng thái: %s", currenWeatherResponse.getWeather().get(0).getMain()));
+           // Glide.with(MainActivity.this).load("https://openweathermap.org/img/wn/" + currenWeatherResponse.getWeather().get(0).getIcon() + "@2x.png").into(binding.includeFragment.ivWeatherImage);
+            setWeatherIcon(this, binding.includeFragment.ivWeatherImage, currenWeatherResponse.getWeather().get(0).getId());
+            binding.includeFragment.tvCondition.setText(String.format("%s", currenWeatherResponse.getWeather().get(0).getMain()));
             binding.includeFragment.tvPressure.setText(String.format("Áp suất: %dhPa", currenWeatherResponse.getMain().getPressure()));
 
 
-            binding.includeFragment.tvMaxMinTemp.setText(String.format("Nhiệt độ cao/thấp: %s/%s", currenWeatherResponse.getMain().getTempMax(), currenWeatherResponse.getMain().getTempMin()));
+            binding.includeFragment.tvMaxMinTemp.setText(String.format("%s°C", currenWeatherResponse.getMain().getTempMin()));
             binding.includeFragment.tvFeellike.setText(String.format("Cảm giác như: %s°C", currenWeatherResponse.getMain().getFeelsLike()));
 
             binding.includeFragment.tvWind.setText(String.format("gió: %skm/h", currenWeatherResponse.getWind().getSpeed()));
@@ -579,5 +579,25 @@ public class MainActivity extends AppCompatActivity implements OnResponseCallbac
 
     }
 
-
+    public static void setWeatherIcon(Context context, ImageView imageView, int weatherCode) {
+        if (weatherCode / 100 == 2) {
+            Glide.with(context).load(R.drawable.ic_storm_weather).into(imageView);
+        } else if (weatherCode / 100 == 3) {
+            Glide.with(context).load(R.drawable.ic_rainy_weather).into(imageView);
+        } else if (weatherCode / 100 == 5) {
+            Glide.with(context).load(R.drawable.ic_rainy_weather).into(imageView);
+        } else if (weatherCode / 100 == 6) {
+            Glide.with(context).load(R.drawable.ic_snow_weather).into(imageView);
+        } else if (weatherCode / 100 == 7) {
+            Glide.with(context).load(R.drawable.ic_unknown).into(imageView);
+        } else if (weatherCode == 800) {
+            Glide.with(context).load(R.drawable.ic_clear_day).into(imageView);
+        } else if (weatherCode == 801) {
+            Glide.with(context).load(R.drawable.ic_few_clouds).into(imageView);
+        } else if (weatherCode == 803) {
+            Glide.with(context).load(R.drawable.ic_broken_clouds).into(imageView);
+        } else if (weatherCode / 100 == 8) {
+            Glide.with(context).load(R.drawable.ic_cloudy_weather).into(imageView);
+        }
+    }
 }

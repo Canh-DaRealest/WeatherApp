@@ -1,27 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/cv_item_view"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_margin="5dp"
     android:layout_gravity="center"
-    android:background="@drawable/bg_day"
     android:clickable="true"
-    android:elevation="11dp"
+    android:background="@drawable/strokebg"
+    android:orientation="vertical"
     android:focusable="true"
     android:gravity="center"
+    android:padding="5dp"
     app:cardCornerRadius="10dp">
 
 
 
-    <LinearLayout
-        android:padding="5dp"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:layout_width="wrap_content"
-        android:orientation="vertical"
-        android:layout_height="wrap_content">
         <ImageView
             android:id="@+id/iv_item_image"
             android:layout_width="40dp"
@@ -171,6 +165,5 @@
 
         </TableRow>
     </LinearLayout>
-    </com.google.android.material.card.MaterialCardView>
 
 

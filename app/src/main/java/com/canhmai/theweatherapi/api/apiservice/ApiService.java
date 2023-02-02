@@ -17,7 +17,7 @@ public interface ApiService {
     @GET("data/2.5/weather?appid=14d1e0f9316a58d75a7cc962a9d17ff8&units=metric&lang=vi")
     Call<CurrenWeatherResponse> getWeatherCurrent(@Query("lat") String lat, @Query("lon") String lon);
 
-    @GET("data/2.5/forecast?appid=14d1e0f9316a58d75a7cc962a9d17ff8&units=metric&lang=vi")
+    @GET("data/2.5/forecast?appid=14d1e0f9316a58d75a7cc962a9d17ff8&units=metric&lang=vi&cnt=12")
     Call<ForecastResponse> getWeatherForecast(@Query("lat") String lat, @Query("lon") String lon);
 
     @GET("data/2.5/air_pollution?appid=14d1e0f9316a58d75a7cc962a9d17ff8&units=metric&lang=vie")
